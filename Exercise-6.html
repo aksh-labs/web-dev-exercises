@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rough clone nav-bar of UltraEdit</title>
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bhaiksuki&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bhaiksuki&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Bhaiksuki&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Bhaiksuki&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        .container{
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ecebe7;
+        }
+
+        .nav {
+            background-color: white;
+            width: 1280px;
+            height: 90px;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            z-index: 99;
+
+        }
+
+        .container {
             border: 1.5px solid #E0E0E0;
             border-radius: 5px;
-            background-color:#F5F5F5;
+            background-color: #F5F5F5;
             display: flex;
             flex-direction: row;
             gap: 20px;
@@ -19,63 +39,325 @@
             margin-right: 18px;
             align-items: center;
             justify-content: center;
+            position: fixed;
+            top: 0;
+            z-index: 100;
         }
 
-        .item{
+
+
+        .item {
             font-family: poppins;
             border: 2px;
             height: 30%;
-            padding-bottom:0;
-            margin-bottom:0;
+            padding-bottom: 0;
+            margin-bottom: 0;
             padding: 2px;
         }
 
-       a{
+        a {
             color: black;
             text-decoration: none;
-          
+
         }
-        .Download{
-            margin-left: 100px;  
-            border:2px;
-            border-radius: 5px;  
+
+        .Download {
+            margin-left: 100px;
+            border: 2px;
+            border-radius: 5px;
             background-color: #FFEB3B;
             width: 100px;
             height: 30px;
             text-align: center;
-            
+
         }
-        .icon{
+
+        .logo {
             height: 60px;
-            margin-left: 12px;
-            width:150px ;
+
+            width: 150px;
             margin-right: 130px;
         }
-    
 
         .space{
             margin:12px;
         }
 
-        .eng{
-            margin-bottom:20px;
+        .lang {
+            margin-bottom: 20px;
         }
-        .search{
-            margin-bottom:25px;
+
+        .search {
+            margin-bottom: 25px;
+        }
+
+        .miniBox {
+            width: 210px;
+            height: 20px;
+            padding-top: 5px;
+            background-color: #f7f6f3;
+            border: 2px solid rgb(229, 227, 227);
+            border-radius: 5px;
+            position: relative;
+            left: 500px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            font-family: inter, poppins;
+
+        }
+
+        .Bold1 {
+            font-weight: 450;
+            width: 900px;
+            height: 180px;
+            /* border: 2px solid black; */
+            padding: 0;
+            margin-top: 80px;
+            margin-left: 40px;
+            font-family: poppins;
+            font-size: 60px;
+            position: relative;
+            left: 150px;
+            text-align: center;
+
+        }
+
+        .Bold2 {
+            font-weight: 450;
+            width: 700px;
+            height: 180px;
+            margin-top: 20px;
+            margin-left: 40px;
+            margin-bottom: 20px;
+            /* border: 2px solid black; */
+            font-family: poppins;
+            font-size: 60px;
+            position: relative;
+            left: 250px;
+            top: -130px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 386.5px);
+            grid-template-rows: repeat(2, 340px);
+            width: 1200px;
+            height: 700px;
+            /* border: 2px solid black; */
+            align-items: center;
+            justify-items: center;
+            position: relative;
+            top: -200px;
+            margin: 30px;
+            gap: 20px;
+            /* left: 430px; */
+        }
+
+
+        .cell1 {
+            align-self: center;
+            justify-self: center;
+            font-family: poppins;
+            border-radius: 4px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .cell2 {
+            font-family: poppins;
+            border-radius: 4px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .cell3 {
+            font-family: poppins;
+            border-radius: 4px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .cell4 {
+            font-family: poppins;
+            border-radius: 4px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .cell5 {
+            font-family: poppins;
+            border-radius: 4px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .cell6 {
+            font-family: poppins;
+            border-radius: 4px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        span {
+            display: block;
+            margin-left: 14px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: poppins;
+            text-align: left;
+            /* margin-bottom: 50px; */
+        }
+
+        .boxIcon {
+            display: block;
+            width: 45px;
+            margin: 12px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
         }
     </style>
 
 </head>
+
 <body>
-    <div class="container">
-        <div class="item icon"> <a href="/"><img src="images/logo.png" alt="logo" width="150" height="60px"></a></div>
-        <div class="item space"><a href="">Products</a></div>
-        <div class="item space"><a href="/">Pricing</a></div>
-        <div class="item space"><a href="/">Resources</a></div>
-        <div class="item space"><a href="/">Our company</a></div>
-        <div class="item Download"><a href="/">Download</a></div>
-        <div class="item eng"><a href="/"><img src="images/lan.png" alt="logo" width="70" height="50px"></a></div>
-        <div class="item search"><a href="/"><img src="images/search.png" alt="logo" width="70" height="50px"></a></div>
+
+    <div class="nav">
+        <div class="container">
+            <div class="item logo"> <a href="/"><img src="images/logo.png" alt="logo" width="150" height="60px"></a>
+            </div>
+            <div class="item space"><a href="">Products</a></div>
+            <div class="item space"><a href="/">Pricing</a></div>
+            <div class="item space"><a href="/">Resources</a></div>
+            <div class="item space"><a href="/">Our company</a></div>
+            <div class="item Download"><a href="/">Download</a></div>
+            <div class="item lang"><a href="/"><img src="images/lan.png" alt="logo" width="70" height="50px"></a></div>
+            <div class="item search"><a href="/"><img src="images/search.png" alt="logo" width="70" height="50px"></a>
+            </div>
+        </div>
     </div>
+
+    <div class="miniBox">
+        What can UltraEdit do for you?
+    </div>
+
+
+    <div class="Bold1">
+        UltraEdit solves the problems
+    </div>
+    <div class="Bold2">
+        other text editors can’t
+    </div>
+
+    <!--     
+    <div class="grid">
+            <div class="cell1">
+                <img src="images/icon1.png" alt="" class="boxIcon">
+                <a href="/"><span>Edit huge files…with zero lag</span></a>
+                <br>
+                <a href="/">Have to open and edit large files? UltraEdit easily handles massive 10+ GB files that choke or crash other editors and IDEs.a</a>
+            </div>
+        <div class="cell2">
+            <img src="images/icon2.png" alt="" class="boxIcon">
+            <a href="/"><span>Navigate your entire workspace instantly</span></a>
+            <br>
+            <a href="/">Stop wasting time hunting for files or switching between tools. UltraEdit’s unified navigation setup lets you jump to any file on your local machine, search across your entire project history using the command palette, or access remote servers through integrated FTP/SFTP.</a>
+        </div>
+        <div class="cell3">
+            <img src="images/icon3.png" alt="" class="boxIcon">
+            <a href="/"><span>Work seamlessly across any file or language</span></a>
+            <br>
+            <a href="/">Handle everything from legacy and proprietary formats, to modern coding languages. With 50 + supported file types and 487+ custom wordfiles get precise syntax highlighting and support for TXT CSV, JSON, XML, EDI, log, binary, and countless other formats.</a>
+        </div>
+        <div class="cell4">
+            <img src="images/icon4.png" alt="" class="boxIcon">
+            <a href="/"><span>Handle sensitive data with confidence</span></a>
+            <br>
+            <a href="/">When your work involves sensitive information, you need an editor built for security and compliance. Get peace of mind with a fortified editing environment and a professional support team available 24/7 help meet your security and compliance requirements.</a>
+        </div>
+        <div class="cell5">
+            <img src="images/icon5.png" alt="" class="boxIcon">
+            <a href="/"><span>Automate repetitive tasks</span></a>
+            <br>
+            <a href="/">Automate repetitive edits with UltraEdit's macros and JavaScript-based scripting engine Combined with regular expressions and column mode, these tools transform hours of manual work into single-click operations.</a>
+        </div>
+        <div class="cell6">
+            <img src="images/icon6.png" alt="" class="boxIcon">
+            <a href="/"><span>Convert between data formats</span></a>
+            <br>
+            <a href="/">UltraEdit supports numerous file formats, letting you view edit, and convert data between CSV, XML, JSON, and various encodings (Unix/DOS/UTF-8/hex) with ease.</a>
+        </div> -->
+
+    <a href="/" class="grid">
+            <div class="cell1">
+                <img src="images/icon1.png" alt="" class="boxIcon">
+                <span>Edit huge files…with zero lag</span>
+                <br>
+                Have to open and edit large files? UltraEdit easily handles massive 10+ GB files that choke or crash
+                other editors and IDEs.
+            </div>
+            <div class="cell2">
+                <img src="images/icon2.png" alt="" class="boxIcon">
+                <span>Navigate your entire workspace instantly</span>
+                <br>
+                Stop wasting time hunting for files or switching between tools. UltraEdit’s unified navigation setup
+                lets you jump to any file on your local machine, search across your entire project history using the
+                command palette, or access remote servers through integrated FTP/SFTP
+            </div>
+            <div class="cell3">
+                <img src="images/icon3.png" alt="" class="boxIcon">
+                <span>Work seamlessly across any file or language</span>
+                <br>
+                Handle everything from legacy and proprietary formats, to modern coding languages. With 50 + supported
+                file types and 487+ custom wordfiles get precise syntax highlighting and support for TXT CSV, JSON, XML,
+                EDI, log, binary, and countless other formats
+            </div>
+            <div class="cell4">
+                <img src="images/icon4.png" alt="" class="boxIcon">
+                <span>Handle sensitive data with confidence</span>
+                <br>
+                When your work involves sensitive information, you need an editor built for security and compliance. Get
+                peace of mind with a fortified editing environment and a professional support team available 24/7 help
+                meet your security and compliance requirements
+            </div>
+            <div class="cell5">
+                <img src="images/icon5.png" alt="" class="boxIcon">
+                <span>Automate repetitive tasks</span>
+                <br>
+                Automate repetitive edits with UltraEdit's macros and JavaScript-based scripting engine Combined with
+                regular expressions and column mode, these tools transform hours of manual work into single-click
+                operations
+            </div>
+            <div class="cell6">
+                <img src="images/icon6.png" alt="" class="boxIcon">
+                <span>Convert between data formats</span>
+                <br>
+                UltraEdit supports numerous file formats, letting you view edit, and convert data between CSV, XML,
+                JSON, and various encodings (Unix/DOS/UTF-8/hex) with ease
+            </div>
+    </a>
 </body>
+
 </html>
