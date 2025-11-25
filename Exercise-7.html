@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile motion</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: bisque;
+        }
+
+
+        .box {
+            animation: animateX 3s linear infinite, animateY 1s ease-out infinite alternate;
+            position: absolute;   
+            bottom: 0;
+            left: 0; 
+            width: 60px;
+            height: 60px;
+            background-color: aqua;
+            border-radius: 170px;
+        }
+
+        @keyframes animateX {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+
+        }
+
+        @keyframes animateY {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+</body>
+
+</html>
