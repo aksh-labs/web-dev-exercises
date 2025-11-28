@@ -1,3 +1,6 @@
+// ------------->>>>>>>>>Business Name Generator<<<<<<<<<---------------
+
+
 let Adjectives={
     0:"Ivory",
     1:"Crazy",
