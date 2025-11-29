@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color the boxes by javaScript</title>
+
+    <style>
+
+        .container{
+
+            display: flex;
+            align-items: center;
+            align-content: center;
+            gap: 30px;
+
+        }
+
+        .box{
+            border: 2px solid black;
+            width: 80px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        for (let i = 0; i < 10; i++) {
+            let math=Math.floor((Math.random()*10))
+        document.body.querySelectorAll(".box")[math].style.backgroundColor="green"
+    }
+    </script>
+        
+</body>
+</html>
