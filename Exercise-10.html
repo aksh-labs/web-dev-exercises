@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Factorial Calculator</title>
+</head>
+
+<body>
+
+    <!-- Method first:By loop -->
+     
+    <script>
+        let fact = 1
+        let number1 = Number(prompt("Enter your number: "))
+
+        for (let i = 1; i <= (number); i++) {
+
+            fact = fact * i
+        }
+
+        console.log("Factorial (loop):", fact)
+    </script>
+
+    <!-- Method second:By reduce method -->
+
+    <script>
+        let numArr = []
+        let number2 = Number(prompt("Enter your number: "))
+
+        for (let i = 1; i <= (number); i++) {
+            numArr.push(i)
+        }
+
+        const multiply = (a, b) => {
+            return a * b
+        }
+
+        console.log("Factorial (reduce):", numArr.reduce(multiply))
+    </script>
+</body>
+
+</html>
