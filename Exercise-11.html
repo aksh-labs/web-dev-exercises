@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color the boxes by javaScript</title>
+    <title>Color the random box by javaScript</title>
 
     <style>
 
@@ -39,11 +39,9 @@
     </div>
 
     <script>
-        for (let i = 0; i < 10; i++) {
-            let math=Math.floor((Math.random()*10))
-        document.body.querySelectorAll(".box")[math].style.backgroundColor="green"
-    }
+        document.body.style.backgroundColor="beige"
+        let math=Math.floor((Math.random()*10))
+        document.body.querySelectorAll(".box")[math].style.backgroundColor="orange"
     </script>
-        
 </body>
 </html>
