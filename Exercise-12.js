@@ -1,3 +1,6 @@
+// ---------------->>>>>>>>>Dynamic Website Builder<<<<<<<<<<<<-----------------
+
+
 btn = document.body.getElementsByClassName("button")[0]
 function createCard(title, cName, views, monthsOld,Duration,thumbnail) {
     document.body.getElementsByClassName("miniBox1")[0].innerHTML = `${title}`
